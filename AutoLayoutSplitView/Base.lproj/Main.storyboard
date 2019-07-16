@@ -734,7 +734,34 @@
                                     <customView identifier="middlePane" wantsLayer="YES" misplaced="YES" id="H0w-wB-DrL" userLabel="Middle Pane View">
                                         <rect key="frame" x="142" y="0.0" width="380" height="217"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <scrollView misplaced="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1my-OY-hgF">
+                                                <rect key="frame" x="0.0" y="0.0" width="380" height="217"/>
+                                                <clipView key="contentView" id="HIp-9z-QJ2">
+                                                    <rect key="frame" x="1" y="1" width="363" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YlH-wj-Lg7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="348" height="185"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        </view>
+                                                    </subviews>
+                                                </clipView>
+                                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="UJa-yG-Lmo">
+                                                    <rect key="frame" x="1" y="201" width="363" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="UmK-5v-3fh">
+                                                    <rect key="frame" x="364" y="1" width="15" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                        </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="1my-OY-hgF" secondAttribute="bottom" id="9UG-lc-NZR"/>
+                                            <constraint firstItem="1my-OY-hgF" firstAttribute="top" secondItem="H0w-wB-DrL" secondAttribute="top" id="Kpy-G5-YC0"/>
+                                            <constraint firstAttribute="trailing" secondItem="1my-OY-hgF" secondAttribute="trailing" id="gOz-r0-NUL"/>
+                                            <constraint firstItem="1my-OY-hgF" firstAttribute="leading" secondItem="H0w-wB-DrL" secondAttribute="leading" id="ire-6X-7CS"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="xiB-if-Q2L"/>
                                         </constraints>
                                     </customView>
@@ -793,14 +820,38 @@
                                     <action selector="rightClick:" target="XfG-lQ-9wD" id="NOE-KX-zh1"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="m8Y-OR-Uif">
+                                <rect key="frame" x="123" y="240" width="70" height="32"/>
+                                <buttonCell key="cell" type="push" title="Load" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JtZ-FB-rmj">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="LoadPicture:" target="XfG-lQ-9wD" id="IsF-Qc-55E"/>
+                                </connections>
+                            </button>
+                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CZl-rx-yfz">
+                                <rect key="frame" x="235" y="245" width="104" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ihx-rK-eHF"/>
+                                </constraints>
+                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="NoS-UE-sWJ"/>
+                                <connections>
+                                    <action selector="slideAction:" target="XfG-lQ-9wD" id="q7b-eT-B4c"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="m8Y-OR-Uif" firstAttribute="leading" secondItem="CNC-Yo-Wuj" secondAttribute="trailing" constant="20" id="1ky-KI-LFW"/>
                             <constraint firstAttribute="trailing" secondItem="RkG-Ws-mEW" secondAttribute="trailing" constant="20" id="8cj-HK-jLo"/>
                             <constraint firstAttribute="bottom" secondItem="nqx-vZ-Gs7" secondAttribute="bottom" constant="10" id="F6v-6D-BVC"/>
+                            <constraint firstItem="CZl-rx-yfz" firstAttribute="leading" secondItem="m8Y-OR-Uif" secondAttribute="trailing" constant="50" id="LHe-6I-WDw"/>
                             <constraint firstItem="CNC-Yo-Wuj" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="Q8v-mZ-We2"/>
                             <constraint firstItem="CNC-Yo-Wuj" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Wsl-g8-i17"/>
+                            <constraint firstItem="CZl-rx-yfz" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="26" id="Yzo-to-L9p"/>
                             <constraint firstItem="nqx-vZ-Gs7" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="b4R-0t-dB6"/>
                             <constraint firstItem="nqx-vZ-Gs7" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="61" id="hGw-kw-Uiy"/>
+                            <constraint firstItem="m8Y-OR-Uif" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="kv2-P7-zQC"/>
                             <constraint firstItem="RkG-Ws-mEW" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="lpg-Ku-bQS"/>
                             <constraint firstAttribute="trailing" secondItem="nqx-vZ-Gs7" secondAttribute="trailing" constant="10" id="nLd-ll-WI5"/>
                         </constraints>
@@ -809,6 +860,8 @@
                         <outlet property="leftPane" destination="slf-Mn-Q8q" id="Qt0-hg-8C0"/>
                         <outlet property="middlePane" destination="H0w-wB-DrL" id="vja-dS-U8u"/>
                         <outlet property="rightPane" destination="vWa-NJ-dQe" id="ZBU-BF-xxT"/>
+                        <outlet property="scrollView" destination="1my-OY-hgF" id="Zum-zV-Tuf"/>
+                        <outlet property="slider" destination="CZl-rx-yfz" id="vc5-Ms-5T7"/>
                         <outlet property="splitView" destination="nqx-vZ-Gs7" id="pYJ-E4-ef1"/>
                     </connections>
                 </viewController>

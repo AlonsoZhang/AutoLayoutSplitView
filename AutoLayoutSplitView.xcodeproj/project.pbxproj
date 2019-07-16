@@ -11,6 +11,7 @@
 		E24D587422D8AE87009BC771 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D587322D8AE87009BC771 /* ViewController.swift */; };
 		E24D587622D8AE88009BC771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24D587522D8AE88009BC771 /* Assets.xcassets */; };
 		E24D587922D8AE88009BC771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24D587722D8AE88009BC771 /* Main.storyboard */; };
+		E25DB7AA22DDE48F00247569 /* butterfly.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E25DB7A922DDE48F00247569 /* butterfly.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		E24D587822D8AE88009BC771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E24D587A22D8AE88009BC771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E24D587B22D8AE88009BC771 /* AutoLayoutSplitView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLayoutSplitView.entitlements; sourceTree = "<group>"; };
+		E25DB7A922DDE48F00247569 /* butterfly.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = butterfly.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				E24D587122D8AE87009BC771 /* AppDelegate.swift */,
 				E24D587322D8AE87009BC771 /* ViewController.swift */,
 				E24D587522D8AE88009BC771 /* Assets.xcassets */,
+				E25DB7A922DDE48F00247569 /* butterfly.jpg */,
 				E24D587722D8AE88009BC771 /* Main.storyboard */,
 				E24D587A22D8AE88009BC771 /* Info.plist */,
 				E24D587B22D8AE88009BC771 /* AutoLayoutSplitView.entitlements */,
@@ -123,6 +126,7 @@
 			files = (
 				E24D587622D8AE88009BC771 /* Assets.xcassets in Resources */,
 				E24D587922D8AE88009BC771 /* Main.storyboard in Resources */,
+				E25DB7AA22DDE48F00247569 /* butterfly.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
